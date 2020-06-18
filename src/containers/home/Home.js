@@ -3,15 +3,18 @@ import {Body, Text, Button, Block} from '~/components';
 
 const Home = ({navigation}) => {
   const goToLoan = () => {
-    navigation.openDrawer();
-  };
-  const createLoan = () => {
-    navigation.navigate('drawer', {screen: 'guide_screen'});
+    navigation.navigate('manage_stack', {
+      screen: 'loan_screen',
+    });
   };
 
-  // const signout = () => {
-  //   navigation.navigate('auth_stack');
-  // };
+  const goToUser = () => {
+    navigation.jumpTo('user_stack');
+  };
+
+  const createLoan = () => {
+    navigation.navigate('create_loan_stack');
+  };
 
   return (
     <Body flex={1} center middle>
@@ -19,13 +22,10 @@ const Home = ({navigation}) => {
         Home screen
       </Text>
       <Block>
-        {/* <Button bg="primary" shadow m="0 0 30px" onPress={signout}>
-          <Text color="white">Đăng xuất</Text>
-        </Button> */}
         <Button bg="primary" shadow m="0 0 30px" onPress={goToLoan}>
           <Text color="white">Chi tiết đơn vay</Text>
         </Button>
-        <Button bg="primary" shadow m="0 0 30px" onPress={createLoan}>
+        <Button bg="primary" shadow m="0 0 30px" onPress={goToUser}>
           <Text color="white">Cá nhân</Text>
         </Button>
         <Button bg="accent" shadow onPress={createLoan}>

@@ -1,12 +1,23 @@
 import React from 'react';
-import {Body, Text} from '~/components';
+import {Body, Text, Button, Block} from '~/components';
 
-const App = () => {
+const Notification = ({navigation}) => {
+  const goDetail = () => {
+    navigation.navigate('identity_step_screen');
+  };
+
   return (
     <Body flex={1} center middle>
-      <Text>App</Text>
+      <Text h1 bold m="0 0 40px">
+        Disbursement screen
+      </Text>
+      <Block>
+        <Button bg="primary" shadow m="0 0 30px" onPress={goDetail}>
+          <Text color="white">Next</Text>
+        </Button>
+      </Block>
     </Body>
   );
 };
 
-export default App;
+export default Notification;

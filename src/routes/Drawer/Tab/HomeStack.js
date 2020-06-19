@@ -9,7 +9,7 @@ import DrawerIcon from '~/components/header/DrawerIcon';
 const {Navigator, Screen} = createStackNavigator();
 
 export default () => (
-  <Navigator>
+  <Navigator initialRouteName="home_screen">
     <Screen
       name="home_screen"
       component={HomeScreen}

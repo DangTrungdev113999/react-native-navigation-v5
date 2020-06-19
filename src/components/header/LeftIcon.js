@@ -4,7 +4,7 @@ import Icon from '../Icon';
 import theme from '../../config/theme';
 
 const RightIcon = ({navigation}) => {
-  const goBack = () => navigation.goBack();
+  const goBack = () => navigation.goBack(null);
   return (
     <TouchableOpacity onPress={goBack}>
       <Icon

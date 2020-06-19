@@ -6,6 +6,11 @@ const Home = ({navigation}) => {
     navigation.navigate('manage_stack', {
       screen: 'loan_screen',
     });
+
+    // navigation.reset({
+    //   index: 0,
+    //   routes: [{name: 'manage_stack'}],
+    // });
   };
 
   const goToUser = () => {
